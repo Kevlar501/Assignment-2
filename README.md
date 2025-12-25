@@ -24,6 +24,10 @@ Hot reloading is enabled, so any changes you make to your files will be reflecte
 
 The Site has also been deployed to Netlify for an easier viewing experience. If you wish, you can navigate to /*URL*/ to avoid installing and running Eleventy.
 
+### Github
+
+The files are also uploaded to a GitHub repository found at the following URL: https://github.com/Kevlar501/Assignment-2
+
 ## Technologies
 
 * [Eleventy](https://www.11ty.dev/)
@@ -31,6 +35,8 @@ The Site has also been deployed to Netlify for an easier viewing experience. If 
 
 ## About
  The "Awl Rights Preserved." in the footer section is a play on words for the simple fact that the website is not copyrighted by myself by any means and is a comedic placeholder for something you would see on a real site, eg. "All Rights Reserved".
+
+ There are features that are listed on the site that are not yet available. Mainly features that require a database sytem to store and update data. Or Features that require JavaScript or other scripting language snippets to drive behavior, such as the language modifier dropdown. These features will be functional in later releases, but for the purpose of this assignment, the displayed features highlight the use of tools like Bulma.
 
 ## References
 Sun Img-"https://www.flaticon.com/free-icons/sun" Sun icons created by Freepik - Flaticon
