@@ -4,7 +4,8 @@
   "description": "A web client for our Weather Forcasting Service.",
   "main": ".eleventy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,6 @@
     "url": "https://github.com/Kevlar501/Assignment-2/issues"
   },
   "homepage": "https://github.com/Kevlar501/Assignment-2#readme",
-  "scripts": {
-    "build": "eleventy",
-  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
   }
