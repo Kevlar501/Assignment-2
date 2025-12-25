@@ -22,7 +22,7 @@ Hot reloading is enabled, so any changes you make to your files will be reflecte
 
 ### Alternative Viewing Method
 
-The Site has also been deployed to Netlify for an easier viewing experience. If you wish, you can navigate to /*URL*/ to avoid installing and running Eleventy.
+The Site has also been deployed to Netlify for an easier viewing experience. If you wish, you can navigate to https://setuappwhetherweather.netlify.app/ to avoid installing and running Eleventy.
 
 ### Github
 
