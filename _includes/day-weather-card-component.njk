@@ -1,0 +1,20 @@
+<div class="card has-background-black">
+    <header class="card-header has-text-white">
+        <p class="card-header-title is-justify-content-center is-size-5 has-text-white">
+            {{ dayWeek }}
+        </p>
+    </header>
+    <div class="card-image has-text-centered">
+        <figure class="image is-128x128 is-inline-block pl-1 pr-1">
+            <img src="{{ weatherImage }}" alt="Image">
+        </figure>
+    </div>
+    <div class="card-content columns has-text-white">
+        <p class="column is-size-6 has-text-left mb-0">
+            {{ tempLow }}
+        </p>
+        <p class="column is-size-6 has-text-right pb-0">
+            {{ tempHigh }}
+        </p>
+    </div>
+</div>

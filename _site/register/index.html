@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="has-background-white" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wheather Weather - Your Weather, Now.</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        )
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target
+            const $target = document.getElementById(target)
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active")
+            $target.classList.toggle("is-active")
+          })
+        })
+      })
+    </script>
+  </head>
+
+  <body class="is-flex is-flex-direction-column" style="height: 100vh;">
+      <nav class="navbar is-centered has-background-white">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        Whether Weather - Home
+      </a>
+      <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </span>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end has-background-white">
+        <div class="field pt-1 pr-3 has">
+        <p class="control has-icons-left">
+          <span class="select has-text-left">
+            <select>
+              <option selected>Language</option>
+              <option value="us">English</option>
+              <option>Español</option>
+              <option>Français</option>
+              <option>Italiano</option>
+              <option>日本語</option>
+              <option>한국어</option>
+            </select>
+          </span>
+          <span class="icon is-small is-left">
+            <i class="fi fi-un"></i>
+          </span>
+        </p>
+      </div>
+        <a href="/login" class="navbar-item has-text-black">
+          Login
+        </a>
+        <a href="/dashboard" class="navbar-item has-text-black">
+          Dashboard
+        </a>
+        <a href="/settings" class="navbar-item has-text-black">
+          Settings
+        </a>
+      </div>
+    </div>
+  </nav>
+    <main class="has-background-white" style="flex: 1 0 auto;">
+      <header class="columns is-vcentered has-text-black has-text-weight-bold">
+    <div class="column is-narrow pl-5">
+        <figure class="image is-128">
+            <img src="/images/logo.png" alt="Logo">
+        </figure>
+    </div>
+    <div class="column has-text-centered">
+        <p id="page-heading" class="is-size-1">
+            Register
+        </p>
+        <p id="page-heading" class="is-size-3">
+            
+        </p>
+    </div>
+    <div class="column is-narrow pr-5" style="width:330px;">
+    
+    </div>
+</header> 
+      <div class="container">
+        
+<hr>
+<br>
+<br>
+
+<h3 class="has-text-weight-bold is-size-5">
+Register:
+</h3>
+<div class="field">
+  <p class="control">
+    <input class="input" type="email" placeholder="Email">
+  </p>
+</div>
+<div class="field">
+  <p class="control">
+    <input class="input" type="password" placeholder="Password">
+  </p>
+</div>
+<div class="field">
+  <p class="control">
+    <button class="button is-success">
+      Register
+    </button>
+  </p>
+  <br>
+  <a href="/login">Or Click Here to Login</a>
+</div>
+      </div>
+    </main>
+      <footer class="footer has-background-white has-text-black" style="height: 10vh; flex: 0 1 auto;">
+  <!-- flex will set footer height without having main content fill stretch the page if footer height is otherwise adjusted, so that only extra content in each section will cause page overflow-->
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <img class="image is-64x64 is-inline" src="/images/logo.png" alt="Whether Weather logo"> © 2025 Whether Weather. Awl Rights Preserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

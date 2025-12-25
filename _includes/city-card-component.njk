@@ -1,0 +1,22 @@
+<section class="card has-text-centered has-background-black has-text-white">
+    <header class="header">
+        <a href="{{cityPath}}">
+            <button class="is-centered is-size-4 has-text-white">
+                {{ cityName }}
+            </button>
+        </a>
+    </header>
+    <div class="card-image has-text-centered">
+        <figure class="image is-128x128 is-inline-block">
+            <img src="{{sunImage}}" alt="Image">
+        </figure>
+    </div>
+    <article class="card-content columns pb-0 pt-0">
+        <p class="content column is-size-4 has-text-left mb-0">
+            {{ tempLow }}
+        </p>
+        <p class="content column is-size-4 has-text-right mb-0">
+            {{ tempHigh }}
+        </p>
+    </article>
+</section>

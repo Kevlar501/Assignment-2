@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="has-background-white" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wheather Weather - Your Weather, Now.</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        )
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target
+            const $target = document.getElementById(target)
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active")
+            $target.classList.toggle("is-active")
+          })
+        })
+      })
+    </script>
+  </head>
+
+  <body class="is-flex is-flex-direction-column" style="height: 100vh;">
+      <nav class="navbar is-centered has-background-white">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        Whether Weather - Home
+      </a>
+      <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </span>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end has-background-white">
+        <div class="field pt-1 pr-3 has">
+        <p class="control has-icons-left">
+          <span class="select has-text-left">
+            <select>
+              <option selected>Language</option>
+              <option value="us">English</option>
+              <option>Español</option>
+              <option>Français</option>
+              <option>Italiano</option>
+              <option>日本語</option>
+              <option>한국어</option>
+            </select>
+          </span>
+          <span class="icon is-small is-left">
+            <i class="fi fi-un"></i>
+          </span>
+        </p>
+      </div>
+        <a href="/login" class="navbar-item has-text-black">
+          Login
+        </a>
+        <a href="/dashboard" class="navbar-item has-text-black">
+          Dashboard
+        </a>
+        <a href="/settings" class="navbar-item has-text-black">
+          Settings
+        </a>
+      </div>
+    </div>
+  </nav>
+    <main class="has-background-white" style="flex: 1 0 auto;">
+      <header class="columns is-vcentered has-text-black has-text-weight-bold">
+    <div class="column is-narrow pl-5">
+        <figure class="image is-128">
+            <img src="/images/logo.png" alt="Logo">
+        </figure>
+    </div>
+    <div class="column has-text-centered">
+        <p id="page-heading" class="is-size-1">
+            Whether Weather - Your Weather, Now!
+        </p>
+        <p id="page-heading" class="is-size-3">
+            
+        </p>
+    </div>
+    <div class="column is-narrow pr-5" style="width:330px;">
+    
+    </div>
+</header> 
+      <div class="container">
+        
+<info class="column has-text-left">
+
+	<content class="content">
+		<h3>Welcome to the Whether Weather web application</h3>
+		<p>You will find all the Weather pages for our covered cities on the dashboard page.</p>
+		<p>Creating an account, logging in and changing your preferences via the Settings page will allow you to modify the Dashboard to suit your needs.</p>
+	</content>
+
+	<hr>
+
+	<content class="content">
+		<h3>New Features:</h3>
+		<p>Below are some of the new features on the site. If you click on the hyperlinks below, they will take you to the corresponding page for each new feature.</p>
+	</content>
+
+	<nav class="breadcrumb" aria-label="breadcrumbs">
+		<ul>
+			<li><a href="#" class="is-size-6">Hurricane Tracker</a></li>
+			<li><a href="#" class="is-size-6">Severe Weather</a></li>
+			<li><a href="#" class="is-size-6">Maps</a></li>
+			<li><a href="#" class="is-size-6">Radar</a></li>
+			<li><a href="#" class="is-size-6">Emergency Preparedness</a></li>
+			<li><a href="#" class="is-size-6">Air Quality</a></li>
+			<li><a href="#" class="is-size-6">Light Polution/Stargazing</a></li>
+			<li class="is-active"><a href="#" class="is-size-6" aria-current="page">News</a></li>
+		</ul>
+	</nav>
+
+	<hr>
+
+	<content class="content">
+		<h3>Feedback:</h3>
+		<p>Fill in the form below and hit sumbit to send us your thoughts on the website. We'd love to hear back from you!</p>
+	</content>
+
+	<field class="field">
+		<label class="label">Name</label>
+		<div class="control">
+			<input class="input" type="text" placeholder="Name">
+		</div>
+	</field>
+
+	<div class="field">
+		<label class="label">Email</label>
+		<div class="control">
+			<input class="input" type="email" placeholder="Email">
+		</div>
+	</div>
+
+	<div class="field">
+		<label class="label">Subject</label>
+		<div class="control">
+			<div class="select">
+				<select>
+					<option>Select</option>
+					<option>General Feedback</option>
+					<option>Complaints</option>
+					<option>Suggestions</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="field">
+		<label class="label">Message</label>
+		<div class="control">
+			<textarea class="textarea" placeholder="Type your message here"></textarea>
+		</div>
+	</div>
+
+	<div class="field">
+		<div class="control">
+			<label class="checkbox">
+				<input type="checkbox">
+				I agree to the <a href="#">terms and conditions</a>
+			</label>
+		</div>
+	</div>
+
+	<div class="field is-grouped">
+		<div class="control">
+			<button class="button is-link">Submit</button>
+		</div>
+		<div class="control">
+			<button class="button is-link is-light">Cancel</button>
+		</div>
+	</div>
+</info>
+
+      </div>
+    </main>
+      <footer class="footer has-background-white has-text-black" style="height: 10vh; flex: 0 1 auto;">
+  <!-- flex will set footer height without having main content fill stretch the page if footer height is otherwise adjusted, so that only extra content in each section will cause page overflow-->
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <img class="image is-64x64 is-inline" src="/images/logo.png" alt="Whether Weather logo"> © 2025 Whether Weather. Awl Rights Preserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

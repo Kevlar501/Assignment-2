@@ -1,0 +1,45 @@
+---
+layout: layout.njk
+title: Dublin
+title2: Today
+timeDay: Right Now
+tempNow: 45 C°
+windSpeed: 15 mph
+---
+
+{% set nowImage = "/images/cloudy.png" %}
+{% set tempMax = "46° F" %}
+{% set windMax = "25 mph" %}
+
+{% include "city-page-row2.njk" %}
+
+{# --------------------------------------------- #}
+{# Weekly Forecast Data                          #}
+{# --------------------------------------------- #}
+
+{% set forecast = [
+  { day: "Today",      img: "/images/partlycloudy.png", low: "41° F", high: "46° F" },
+  { day: "Wednesday",  img: "/images/partlycloudy.png", low: "38° F", high: "44° F" },
+  { day: "Thursday",   img: "/images/partlycloudy.png", low: "42° F", high: "45° F" },
+  { day: "Friday",     img: "/images/partlycloudy.png", low: "41° F", high: "47° F" },
+  { day: "Saturday",   img: "/images/partlycloudy.png", low: "36° F", high: "47° F" },
+  { day: "Sunday",     img: "/images/cloudy.png",       low: "35° F", high: "44° F" },
+  { day: "Monday",     img: "/images/partlycloudy.png", low: "35° F", high: "45° F" }
+] %}
+<!-- Above creates an Array List to feed data into the set tags below to populate each card -->  
+<div class="columns is-multiline is-vcentered is-centered">
+
+  {% for item in forecast %}
+    <div class="column">
+
+      {% set dayWeek = item.day %}
+      {% set weatherImage = item.img %}
+      {% set tempLow = item.low %}
+      {% set tempHigh = item.high %}
+
+      {% include "day-weather-card-component.njk" %}
+
+    </div>
+  {% endfor %}
+
+</div>

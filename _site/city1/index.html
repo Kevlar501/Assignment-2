@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="has-background-white" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wheather Weather - Your Weather, Now.</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css"/>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        )
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target
+            const $target = document.getElementById(target)
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active")
+            $target.classList.toggle("is-active")
+          })
+        })
+      })
+    </script>
+  </head>
+
+  <body class="is-flex is-flex-direction-column" style="height: 100vh; overflow: hidden;">
+      <nav class="navbar is-centered has-background-white">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        Whether Weather - Home
+      </a>
+      <span class="navbar-burger has-background-black" data-target="navbarMenu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </span>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end has-background-white">
+        <a href="/dashboard" class="navbar-item has-text-black">
+          Dashboard
+        </a>
+        <a href="/settings" class="navbar-item has-text-black">
+          Settings
+        </a>
+      </div>
+    </div>
+  </nav>
+    <main class="has-background-white p-4" style="flex: 1 0 auto;">
+      <header class="columns is-vcentered has-text-black has-text-weight-bold">
+    <div class="column is-narrow">
+        <figure class="image is-128">
+            <img src="/images/logo.png" alt="Logo">
+        </figure>
+    </div>
+    <div class="column has-text-centered">
+        <p id="page-heading" class="is-size-1">
+            San Francisco
+        </p>
+        <p id="page-heading" class="is-size-3">
+            Today
+        </p>
+    </div>
+    <div class="column is-narrow" style="width:330px;">
+    
+    <!-- If the above tags are being used, then the black background will show, avoiding a blank background if there is no content on all of the non-city focus pages. -->
+        <section class="card has-text-centered has-background-black has-text-white">
+             <header class="header pt-4 pb-2">
+                <a href="">
+                     <p class="is-size-4 has-text-white">
+                        Right Now
+                     </p>
+                </a>
+            </header>
+            <br>
+            <article class="card-content columns pb-3 pt-5">
+                <p class="content column is-size-4 has-text-left mb-0">
+                     21 C°
+                </p>
+                <p class="content column is-size-4 has-text-right mb-0">
+                    35 mph
+                 </p>
+             </article>
+         </section>
+    
+    </div>
+</header> 
+      <div class="columns is-multiline is-vcentered is-centered">
+        		<br>
+
+		
+		
+		
+		
+
+		<div class="column is-1.5">
+    <section class="card has-text-centered has-background-black has-text-white">
+        <header class="header">
+            <p class="is-size-4">
+                Today
+            </p>
+        </header>
+        <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+                <img src="/images/partlycloudy.png" alt="Image">
+            </figure>
+        </div>
+        <article class="card-content columns pb-0 pt-0">
+            <p class="content column is-size-5 has-text-left mb-0">
+                64° F
+            </p>
+            <p class="content column is-size-5 has-text-right mb-0">
+                70° F
+            </p>
+        </article>
+    </section>
+</div>
+
+		
+		
+		
+		
+
+		<div class="column is-1.5">
+    <section class="card has-text-centered has-background-black has-text-white">
+        <header class="header">
+            <p class="is-size-4">
+                Wednesday
+            </p>
+        </header>
+        <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+                <img src="/images/partlycloudy.png" alt="Image">
+            </figure>
+        </div>
+        <article class="card-content columns pb-0 pt-0">
+            <p class="content column is-size-5 has-text-left mb-0">
+                64° F
+            </p>
+            <p class="content column is-size-5 has-text-right mb-0">
+                70° F
+            </p>
+        </article>
+    </section>
+</div>
+
+		
+		
+		
+		
+
+		<div class="column is-1.5">
+    <section class="card has-text-centered has-background-black has-text-white">
+        <header class="header">
+            <p class="is-size-4">
+                Thursday
+            </p>
+        </header>
+        <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+                <img src="/images/partlycloudy.png" alt="Image">
+            </figure>
+        </div>
+        <article class="card-content columns pb-0 pt-0">
+            <p class="content column is-size-5 has-text-left mb-0">
+                64° F
+            </p>
+            <p class="content column is-size-5 has-text-right mb-0">
+                70° F
+            </p>
+        </article>
+    </section>
+</div>
+
+		
+		
+		
+		
+
+		<div class="column is-1.5">
+    <section class="card has-text-centered has-background-black has-text-white">
+        <header class="header">
+            <p class="is-size-4">
+                Friday
+            </p>
+        </header>
+        <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+                <img src="/images/partlycloudy.png" alt="Image">
+            </figure>
+        </div>
+        <article class="card-content columns pb-0 pt-0">
+            <p class="content column is-size-5 has-text-left mb-0">
+                64° F
+            </p>
+            <p class="content column is-size-5 has-text-right mb-0">
+                70° F
+            </p>
+        </article>
+    </section>
+</div>
+
+		
+		
+		
+		
+
+		<div class="column is-1.5">
+    <section class="card has-text-centered has-background-black has-text-white">
+        <header class="header">
+            <p class="is-size-4">
+                Saturday
+            </p>
+        </header>
+        <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+                <img src="/images/partlycloudy.png" alt="Image">
+            </figure>
+        </div>
+        <article class="card-content columns pb-0 pt-0">
+            <p class="content column is-size-5 has-text-left mb-0">
+                64° F
+            </p>
+            <p class="content column is-size-5 has-text-right mb-0">
+                70° F
+            </p>
+        </article>
+    </section>
+</div>
+
+		
+		
+		
+		
+
+		<div class="column is-1.5">
+    <section class="card has-text-centered has-background-black has-text-white">
+        <header class="header">
+            <p class="is-size-4">
+                Sunday
+            </p>
+        </header>
+        <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+                <img src="/images/partlycloudy.png" alt="Image">
+            </figure>
+        </div>
+        <article class="card-content columns pb-0 pt-0">
+            <p class="content column is-size-5 has-text-left mb-0">
+                64° F
+            </p>
+            <p class="content column is-size-5 has-text-right mb-0">
+                70° F
+            </p>
+        </article>
+    </section>
+</div>
+
+		
+		
+		
+		
+
+		<div class="column is-1.5">
+    <section class="card has-text-centered has-background-black has-text-white">
+        <header class="header">
+            <p class="is-size-4">
+                Monday
+            </p>
+        </header>
+        <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+                <img src="/images/partlycloudy.png" alt="Image">
+            </figure>
+        </div>
+        <article class="card-content columns pb-0 pt-0">
+            <p class="content column is-size-5 has-text-left mb-0">
+                64° F
+            </p>
+            <p class="content column is-size-5 has-text-right mb-0">
+                70° F
+            </p>
+        </article>
+    </section>
+</div>
+      </div>
+    </main>
+      <footer class="footer has-background-white has-text-black" style="height: 10vh; flex: 0 1 auto;">
+  <!-- flex will set footer height without having main content fill stretch the page if footer height is otherwise adjusted, so that only extra content in each section will cause page overflow-->
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <img class="image is-64x64 is-inline" src="/images/logo.png" alt="Whether Weather logo"> © 2025 Whether Weather. Awl Rights Preserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

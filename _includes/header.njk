@@ -1,0 +1,36 @@
+<header class="columns is-vcentered has-text-black has-text-weight-bold">
+    <div class="column is-narrow pl-5">
+        <figure class="image is-128">
+            <img src="/images/logo.png" alt="Logo">
+        </figure>
+    </div>
+    <div class="column has-text-centered">
+        <p id="page-heading" class="is-size-1">
+            {{ title }}
+        </p>
+        <p id="page-heading" class="is-size-3">
+            {{ title2 }}
+        </p>
+    </div>
+    <div class="column is-narrow pr-5" style="width:330px;">
+    {% if timeDay or tempNow or WindSpeed %}
+    <!-- If the above tags are being used, then the black background will show, avoiding a blank background if there is no content on all of the non-city focus pages. -->
+        <section class="card has-text-centered has-background-black has-text-white">
+             <header class="header pt-4 pb-2">
+                     <p class="is-size-4 has-text-white">
+                        {{ timeDay }}
+                     </p>
+            </header>
+            <br>
+            <article class="card-content columns pb-3 pt-5">
+                <p class="content column is-size-4 has-text-left mb-0">
+                     {{ tempNow }}
+                </p>
+                <p class="content column is-size-4 has-text-right mb-0">
+                    {{ windSpeed }}
+                 </p>
+             </article>
+         </section>
+    {% endif %}
+    </div>
+</header>

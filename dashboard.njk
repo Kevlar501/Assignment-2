@@ -1,0 +1,35 @@
+---
+layout: layout.njk
+title: Dashboard
+---
+
+{# --------------------------------------------- #}
+{# City Overview Dashboard                       #}
+{# --------------------------------------------- #}
+
+{% set cities = [
+  { name: "San Francisco", img: "/images/sun2.png", low: "21° F", high: "27° F", path: "/city-san-francisco" },
+  { name: "Dublin",        img: "/images/sun2.png", low: "41° F", high: "46° F", path: "/city-dublin" },
+  { name: "Tokyo",         img: "/images/sun2.png", low: "46° F", high: "56° F", path: "/city-tokyo" },
+  { name: "London",        img: "/images/sun2.png", low: "37° F", high: "43° F", path: "/city-london" },
+  { name: "New York",      img: "/images/sun2.png", low: "32° F", high: "39° F", path: "/city-new-york" },
+  { name: "Barcelona",     img: "/images/sun2.png", low: "52° F", high: "55° F", path: "/city-barcelona" },
+  { name: "Hong Kong",     img: "/images/sun2.png", low: "50° F", high: "68° F", path: "/city-hong-kong" },
+  { name: "Paris",         img: "/images/sun2.png", low: "28° F", high: "38° F", path: "/city-paris" }
+] %}
+<!-- Above creates an Array List to feed data into the set tags below to populate each card -->
+<div class="columns is-multiline is-centered is-vcentered">
+  {% for city in cities %}
+    <div class="column is-3">
+
+      {% set cityName = city.name %}
+      {% set sunImage = city.img %}
+      {% set tempLow = city.low %}
+      {% set tempHigh = city.high %}
+      {% set cityPath = city.path %}
+
+      {% include "city-card-component.njk" %}
+
+    </div>
+  {% endfor %}
+</div>

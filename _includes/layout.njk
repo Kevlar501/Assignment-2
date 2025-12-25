@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="has-background-white" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wheather Weather - Your Weather, Now.</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/versions/bulma-no-dark-mode.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(
+          document.querySelectorAll(".navbar-burger"),
+          0
+        )
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach((el) => {
+          el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target
+            const $target = document.getElementById(target)
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active")
+            $target.classList.toggle("is-active")
+          })
+        })
+      })
+    </script>
+  </head>
+
+  <body class="is-flex is-flex-direction-column" style="height: 100vh;">
+    {% include "nav.njk" %}
+    <main class="has-background-white" style="flex: 1 0 auto;">
+      {% include "header.njk" %} 
+      <div class="container">
+        {{ content | safe }}
+      </div>
+    </main>
+    {% include "footer.njk" %}
+  </body>
+</html>

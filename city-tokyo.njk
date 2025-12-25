@@ -1,0 +1,45 @@
+---
+layout: layout.njk
+title: Tokyo
+title2: Today
+timeDay: Right Now
+tempNow: 50 C°
+windSpeed: 2 mph
+---
+
+{% set nowImage = "/images/rain.png" %}
+{% set tempMax = "56° F" %}
+{% set windMax = "2 mph" %}
+
+{% include "city-page-row2.njk" %}
+
+{# --------------------------------------------- #}
+{# Weekly Forecast Data                          #}
+{# --------------------------------------------- #}
+
+{% set forecast = [
+  { day: "Today",      img: "/images/rain.png",         low: "46° F", high: "56° F" },
+  { day: "Wednesday",  img: "/images/wind.png",         low: "37° F", high: "52° F" },
+  { day: "Thursday",   img: "/images/partlycloudy.png", low: "33° F", high: "46° F" },
+  { day: "Friday",     img: "/images/sun2.png",         low: "37° F", high: "54° F" },
+  { day: "Saturday",   img: "/images/partlycloudy.png", low: "39° F", high: "53° F" },
+  { day: "Sunday",     img: "/images/partlycloudy.png", low: "40° F", high: "58° F" },
+  { day: "Monday",     img: "/images/partlycloudy.png", low: "38° F", high: "51° F" }
+] %}
+  
+<div class="columns is-multiline is-vcentered is-centered">
+
+  {% for item in forecast %}
+    <div class="column">
+
+      {% set dayWeek = item.day %}
+      {% set weatherImage = item.img %}
+      {% set tempLow = item.low %}
+      {% set tempHigh = item.high %}
+
+      {% include "day-weather-card-component.njk" %}
+
+    </div>
+  {% endfor %}
+
+</div>
