@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/Kevlar501/Assignment-2#readme",
   "scripts": {
-    "build": "eleventy"
+    "build": "eleventy",
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
   }
 }
