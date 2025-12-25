@@ -1,6 +1,6 @@
 # Whether Weather
 
-A web client for our Weather Forcasting Service.
+A web client for our Weather Forecasting Service.
 
 ## Getting Started
 
